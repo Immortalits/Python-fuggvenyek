@@ -1,14 +1,14 @@
-szam = input('Írj be egy számot: ')
+text = input('Írj be egy számot: ')
 
 
-def beszelo():
-    if szam.isdigit():
-        x = int(szam)
-        sorszam = 0
-        while x > 0:
-            sorszam += 1
-            x -= 1
-            print(f'{sorszam}. Helló!')
+def convert_to_number(text):
+    count = int(text)
+    return count
 
 
-beszelo()
+def print_hello(count):
+    for i in range(count):
+        print(f'{i+1}. Hello!')
+
+
+print_hello(convert_to_number(text))
